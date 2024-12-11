@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   run-test:
     runs-on: macos-latest
@@ -15,9 +19,6 @@ jobs:
 
     - name: Install Dependencies
       run: npm install
-
-    - name: List available Xcode versions
-      run: ls /Applications | grep Xcode
 
     - name: Set up Xcode version
       run: sudo xcode-select -s /Applications/Xcode_16.1.app/Contents/Developer
