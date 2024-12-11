@@ -2,13 +2,14 @@ name: iOS
 
 on:
   push:
-    branch:
+    branches:
       - main
 
 jobs:
   run-test:
     runs-on: macos-latest
-    
+
+    steps:
     - name: Checkout Code
       uses: actions/checkout@v4
 
