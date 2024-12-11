@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   run-test:
-    runs-on: macos-latest
+    runs-on: macos-latest-large
 
     steps:
     - name: Checkout Code
