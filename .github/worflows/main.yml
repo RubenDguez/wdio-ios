@@ -1,0 +1,19 @@
+name: iOS
+
+on:
+  push:
+    branch:
+      - main
+
+jobs:
+  run-test:
+    runs-on: macos-latest
+    
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run Script
+      run: npm run wdio
