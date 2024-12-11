@@ -58,7 +58,8 @@ export const config: WebdriverIO.Config = {
         browserName: 'Safari',
         'appium:deviceName': 'iPhone 16 Plus',
         'appium:platformVersion': '18.1',
-        'appium:automationName': 'XCUITest'
+        'appium:automationName': 'XCUITest',
+        'appium:wdaLaunchTimeout': 120000
     }],
 
     //
